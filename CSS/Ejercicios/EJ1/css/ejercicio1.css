@@ -1,0 +1,79 @@
+/* Fuente Arial en negro con selector universal. Quitamos márgenes laterales*/
+* { 
+	font-family:Arial ; 
+	color:Black; margin-left:0px; 
+	margin-right:0px; 
+	box-sizing: border-box;}
+
+/* Padding en todo el body para centrar contenido con márge en blanco. Relativos para distintos tamaños de pantalla */
+body {
+	padding-left:5%;
+	padding-right:5%;
+}
+
+/* Cabecera. Cambio de colores, texto centrado. Fuente grande. */
+header {
+	background-color:DarkGreen; 
+	color:White; font-size: 60px; 
+	border-radius:10px;
+	text-align:center;
+	padding:30px; 
+	margin-bottom:20px;}
+
+/* Sección. Bordes arriba y abajo */
+section {
+	border-top:5px; 
+	border-bottom:5px; 
+	border-color:darkgreen; 
+	border-top-style:solid; 
+	border-bottom-style:solid;
+}
+
+/* Artículo. Borde sólo arriba (separa de la sección) */
+article { 
+	border-top:5px; 
+	border-color:darkgreen; 
+	border-top-style:solid;
+}
+
+/* Títulos en negrita y color verde */
+h2, h3 {
+	font-weight:bold; 
+	color:DarkGreen;
+}
+
+/* Párrafos */
+p {font-weight:bold; 
+	font-size:15px; 
+	color:Black;padding-top:10px; 
+	padding-bottom:10px;
+}
+
+/* Listas desordenadas. Cambiamos estilo de los indicadores de ítem a cuadrados */
+ul {
+	list-style-type: square;
+}
+
+/* Ítems de todas las listas en color marrón */
+li {
+	color:Brown;
+}
+
+/* Imagen flotante al 50% de anchura */
+img {
+	width: 50%;
+	float: left;
+}
+
+#contenido {
+	padding: 10px;
+	width: 50%;
+	float: left;
+}
+
+footer {
+	clear: both;
+	border-top:5px; 
+	border-color:darkgreen; 
+	border-top-style:solid; 
+}

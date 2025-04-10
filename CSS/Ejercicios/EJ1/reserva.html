@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel Miguel Beach</title>
+		<link rel="stylesheet" href="css/ejercicio3.css" type="text/css">
+	</head>
+	
+	<body>
+	
+		<!-- Estilo para cabecera con nombre del hotel -->
+		<header class="cabecera">
+			<h1>Hotel Miguel Beach</h1>
+		</header>
+		
+		<!-- Sección -->
+		<section class="intro">
+			<!-- Caja para las fotos. Tamaño de cada una 50% para que aparezcan una junto a la otra -->
+			<div>
+				<img class="border1" src="imagenes/beaches-near-madrid-og.jpg" alt="Playa paradisíaca"><img class="border2" src="imagenes/hotel.jpg" alt="Suite superior">
+			</div>
+			<div class="indentacion">
+				El hotel Miguel Beach, situado a escasos 100 metros de la playa, y reformado recientemente para mayor comodidad, 
+				le brindará un estancia placentera, rodeado de todas las comodidades que pueda imaginar.
+			</div>
+			
+			<!-- El formulario está entre etiquetas de tipo article -->
+			<article class="reserva">	
+				<!-- Los datos se envían por mail -->
+				<form action="mailto:reservas@mihotel.com" method="post">
+
+					<!-- Agrupamos los campos en distintos apartados fieldset según la temática -->
+					<fieldset>
+						<legend>DATOS DEL HUÉSPED:</legend>
+
+						<label for="nombre">Nombre:</label><br>
+						<input type="text" id="nombre" name="nombre" required><br><br>
+						<label for="apellidos">Apellidos:</label><br>
+						<input type="text" id="apellidos" name="apellidos" required><br><br>
+						<label for="telefono">Teléfono de contacto:</label><br>
+						<input type="tel" maxlength="9" id="telefono" name="telefono" required><br><br>
+						<label for="email">e-mail:</label><br>
+						<input type="email" id="email" name="email" required><br>
+					</fieldset>
+					<br><br>
+					<fieldset>
+						<legend>DATOS DE LA RESERVA:</legend>
+
+						<label for="noches">Número de noches:</label><br>
+						<input type="number" id="noches" name="noches" min="0" required><br><br>
+						<label for="fentrada">Fecha de entrada:</label><br>
+						<input type="date" id="fentrada" name="fentrada" required><br><br>
+						<label for="fsalida">Fecha de salida:</label><br>
+						<input type="date" id="fsalida" name="fsalida" required><br><br>
+						<p>Tipo de habitación:</p>
+						<label for="simple">Habitación simple</label>
+						<input type="radio" name=habitacion id="simple" value="simple">
+						<label for="doble">&nbsp;&nbsp;&nbsp;Habitación doble</label>
+						<input type="radio" name=habitacion id="doble" value="doble" checked>
+						<label for="matrimonio">&nbsp;&nbsp;&nbsp;Habitación matrimonio</label>
+						<input type="radio" name=habitacion id="matrimonio" value="matrimonio">
+					
+					</fieldset>
+					<br><br>
+					<fieldset>
+						<legend>MEJORE SU ESTANCIA:</legend>
+
+						<input type="checkbox" name="desayuno" id="desayuno" value="si" checked>
+						<label for="desayuno">desayuno</label><br>
+						<input type="checkbox" name="comida" id="comida" value="si">
+						<label for="comida">comida</label><br>
+						<input type="checkbox" name="cena" id="cena" value="si">
+						<label for="cena">cena</label><br>
+						<input type="checkbox" name="nevera" id="nevera" value="si">
+						<label for="nevera">nevera</label><br>
+						<input type="checkbox" name="cama" id="cama" value="si">
+						<label for="cama">cama supletoria</label><br>
+						<br>
+						<label for="tcama">Tipo de cama:</label><br>
+						<select id="tcama" name="tcama">
+							<option value="doble">Doble</option>
+							<option value="individual">Individual</option>
+						</select><br><br>
+						
+						<label for="comentarios">Comentarios:</label><br>
+						<textarea id="comentarios" name="comentarios"></textarea><br>
+					
+					</fieldset>
+					<br><br>
+					
+					<!-- Botones para envío o borrado de campos del formulario -->
+					<input type="reset" value="Borrar formulario" class="boton">
+					<input type="submit" value="Reservar" class="boton">
+			
+				</form>
+
+			</article>
+		</section>
+	</body>
+</html>

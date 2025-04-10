@@ -1,0 +1,105 @@
+/* Fuente para toda la página */
+body {
+  font-family:sans-serif;
+  color:black;}
+
+/* Estilos para la cabecera. Fondo negro, letras blancas y esquinas redondeadas */
+header {
+  background-color:black; 
+  color:white; 
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius:10px;
+  text-align:center;}
+
+  h1 {
+    margin:0px; 
+    padding:0px;
+  }
+
+/* Margen superior en section para separar de la cabecera */
+.section{
+  margin-top:20px;
+}
+
+/* Cuadro con la presentación */
+.cuadrogris-titulo {
+  background-color: slategray;
+  font-weight:bold;
+  color:white;
+  padding: 20px;
+  border-radius: 10px;
+  height:268px;
+  margin-top:20px;
+}
+
+/* Quitamos los márgenes de h2 para pegar a los bordes */
+h2 {
+  margin: 0px;
+}
+
+/* Igual al de presentación, cambiando colores para contraste */
+.cuadromarron {
+  background-color: brown;
+  font-weight:bold;
+  color:white;
+  padding: 20px;
+  border-radius: 10px;
+  height:268px;
+  margin-top:20px;
+}
+
+/* A la imagen le ponemos estilo float left para que quede a la izquierda del texto */
+.imagenflotante{
+  float:left;
+  padding-right: 20px;
+  height: 268px;
+  width: 248px;
+}
+
+/* Tamaño de letra de los títulos */
+.titulo {
+  font-size:30px;
+}
+
+/* Estilo de los marcadores en listas desordenadas */
+ul.aficiones {
+  list-style-type:square;
+}
+
+/* En el footer introducimos */
+footer {
+  padding-left:200px;
+}
+
+/* Lista de enlaces a redes sociales. Lista desordenada sin marcadores, alineada en fila */
+ul.enlace {
+  list-style-type: none;
+}
+li.enlace {
+  float:left; 
+  padding-left:50px;
+  padding-right:50px;
+}
+
+/* Estilos para enlaces. Sin cambio de color, y subrayado al pasar encima con ratón */
+a:link {
+  color:tan;
+  text-decoration: none;
+}
+
+a:visited {
+  color: tan;
+  text-decoration: none;
+}
+
+a:hover {
+  color: tan;
+  text-decoration: underline;
+}
+
+.img_footer{
+   height: 68px;
+   width: 68px; 
+}
+

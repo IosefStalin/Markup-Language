@@ -1,0 +1,100 @@
+/* Fuente y fondo para la web */
+body {
+	font-family:sans-serif;
+	background-color:chocolate;
+}
+
+/* Cabecera con nombre del hotel */
+.cabecera {
+	background-color: darkgrey; 
+	padding-top:20px; 
+	padding-bottom:20px; 
+	padding-left:50px;
+}
+
+/* Estilo para aplicar a etiqueta section */
+.intro {
+	font-weight:bold; 
+	background-color:darkgrey;
+	color:white;
+}
+
+h1 {
+	color:white;
+}
+
+/* Indentamos el texto usando una clase para que no aparezca pegado al borde de la caja */
+.indentacion {
+	padding:20px;
+	clear: both;
+}
+
+/* Clase que aplicamos a etiqueta article que contiene el formulario */
+.reserva {
+	background-color:burlywood; 
+	color:black;
+	padding:20px;}
+
+/* Distintos estilos para elementos del formulario */
+input[type=text] {
+	width:50%;
+}
+
+input[type=email] {
+	width:50%;
+}
+
+input {
+	border-radius:5px;
+	border:1px solid;
+	border-color:darkgrey;
+	padding:5px;
+}
+
+textarea{
+	width:50%;
+	resize:none;
+	border-radius:5px;
+	border:1px solid;
+	border-color:darkgrey;
+	padding:5px;}
+
+label {
+	font-weight:normal;
+}
+
+select {
+	border-radius:5px;
+	border:1px solid;
+	border-color:darkgrey;
+	padding:5px;
+}
+
+.boton {
+	background-color:chocolate; 
+	color:white; 
+	font-weight:bold;
+	border:0px;
+	border-radius:0px;
+	padding:10px;
+}
+
+/* En los parágrafos quitamos la negrita */
+p {
+	font-weight:normal
+}
+
+/* Imágenes con ancho 50% */
+img {
+	width: 50%;
+	float: left;
+}
+
+img.border1 {
+	border-radius: 20px 0px 0px 20px;
+}
+
+img.border2 {
+	border-radius: 0px 20px 20px 0px;
+}
+

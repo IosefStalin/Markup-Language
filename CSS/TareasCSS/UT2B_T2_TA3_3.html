@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="author" content="Apellido1_Apellido2_Nombre">
+	<meta name="description" content="Entendiendo CSS">
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<style>
+		#formulario h2 {
+			text-align: center;
+			color: white;
+		}
+		form {
+			background-color: #669999;
+			border: 2px solid #006666;
+			font-family: "Arial";
+		}
+		span {
+			background-color: #996666;
+			border: 1px solid #006666;
+			padding-left: 2px;color: white;
+		}
+		.titulo {
+			background-color: #006666;
+			border: 1px solid #006666;
+			padding-left: 2px;
+			color: white;
+			width: 200px;
+		}
+		.ayuda {
+			font-size: 12px;
+		}
+		#botones {
+			border: 4px solid #006666;
+			padding: 10px;
+			width: 300px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="mailto:dir@email.com" method="POST"
+	enctype="text/plain">
+	<h2>Formulario de alta</h2>
+	<p class="titulo">Nombre y apellidos </p>
+	<div>
+		<span>Nombre</span>
+		<input id="nombre" name="nombre" value="">
+		<span>Primer apellido</span>
+		<input id="apellido1" name="apellido1" value="">
+		<span>Segundo apellido</span>
+		<input id="apellido2" name="apellido2" value="">
+	</div>
+	<p class="ayuda">No te olvides de escribir también tu segundo
+	apellido</p><p class="titulo">Dirección </p>
+	<div>
+		<span>Calle, número, piso, puerta</span>
+		<input id="direccion" name="direccion" value="">
+		<span>Código postal</span>
+		<input id="codigopostal" name="codigopostal" value="">
+		<span>Municipio</span>
+		<input id="municipio" name="municipio" value="">
+		<span>Provincia</span>
+		<select id="provincia" name="provincia">
+			<option value="Vacio">Selecciona una opción</option>
+			<option value="Madrid">Madrid</option>
+			<option value="Granada">Granada</option>
+			<option value="Málaga">Málaga</option>
+		</select>
+	</div>
+	<p class="ayuda">El código postal es imprescindible para poder
+	recibir los pedidos</p>
+	<div id="botones">
+		<input id="alta" type="submit" value="Dar de alta">
+		<input id="borrar" type="reset" value="Limpiar datos">
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Encabezado y Navegación */
+header {
+  background: linear-gradient(to right, darkgreen, lightgreen);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px grey;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: brown;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: darkbrown;
+  text-decoration: underline;
+}
+
+/* Sección Destacada */
+.destacado {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  width: 300px;
+  text-align: center;
+}
+
+.destacado img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.destacado h2 {
+  color: darkgreen;
+}
+
+.destacado .descripcion {
+  color: darkgrey;
+}
+
+.destacado button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.destacado button:hover {
+  background-color: darkgreen;
+}
+
+/* Tabla de Productos */
+.tabla-productos {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.tabla-productos caption {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.tabla-productos th {
+  background-color: brown;
+  color: white;
+}
+
+.tabla-productos tbody tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+/* Sección del Equipo */
+.equipo {
+  background: linear-gradient(to bottom, beige, white);
+  padding: 20px;
+}
+
+.equipo h2 {
+  color: darkbrown;
+}
+
+.equipo img {
+  width: 400px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.contenedor-equipo {
+  overflow: hidden;
+}
+
+.contenedor-equipo p {
+  font-size: 1.2em;
+}
+
+.contenedor-equipo ul li {
+  color: black;
+  border: 2px solid brown;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+main {
+  float:left;
+  width: 75%;
+}
+
+/* Barra Lateral (Aside) */
+aside {
+  float: left;
+  right: 0;
+  top: 0;
+  width: 25%;
+  background-color: lightgreen;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+footer {
+  clear: both;
+}
+
+#img_equipo {
+  border-radius: 15px;
+}
+
+footer {
+  background-color: darkgreen;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}

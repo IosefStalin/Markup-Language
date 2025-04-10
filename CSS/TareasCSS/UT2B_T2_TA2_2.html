@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta name="author" content="Nombre_apellido1_apellido2">
+	<meta name="description" content="Entendiendo CSS">
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<style type="text/css">
+		h2{margin-left: 15%;}
+
+		div {
+			border: 3px solid;
+			height: 50px;
+			width: 250px;
+			margin: 35px 25px;
+			background-color: yellow;
+			font-size: 14px;
+			text-align: center;
+			padding-top: 16px;
+			word-wrap: break-word;
+		}
+
+		div:first-child {
+			margin: 0 20px 0 20px;
+		}
+
+		#caja0 {float: left; border-style: none; border-width: 0; background-color: white;}
+
+		#caja1 {border-radius: 20px; box-shadow: inset -5px -5px;}
+
+		#caja2 {border-radius: 20px; box-shadow: inset 8px 8px;}
+
+		#caja3 {border-radius: 20px;box-shadow: inset 15px 15px;}
+
+		#caja4 {border-radius: 20px; box-shadow: inset 15px 15px maroon;}
+
+		#caja5 {border-radius: 20px; box-shadow: inset 15px 15px 20px maroon;}
+
+		#caja6 {float:left; border-style:none; border-width:0; background-color:white;}
+
+		#caja7 {border-radius: 20px; box-shadow: inset -5px -5px 0px 10px;}
+
+		#caja8 {border-radius: 20px; box-shadow: inset 8px 8px 10px 0;}
+
+		#caja9 {border-radius: 20px;box-shadow: inset 15px 15px 10px 5px;}
+
+		#caja10 {border-radius: 20px;box-shadow: inset 0 0 15px 0 maroon;}
+		#caja11 {border-radius: 20px;box-shadow: inset 0 0 15px 10px maroon;}
+	</style>
+</head>
+
+<body>
+	<h2>CSS box-shadow</h2>
+	<div id="caja0">
+		<div id="caja1">box-shadow: inset -5px -5px;</div>
+		<div id="caja2">box-shadow: inset 8px 8px;</div>
+		<div id="caja3">box-shadow: inset 15px 15px; </div>
+		<div id="caja4">box-shadow: inset 15px 15px maroon;</div>
+		<div id="caja5">box-shadow: inset 15px 15px 20px maroon;</div>
+	</div>
+	<div id="caja6">
+		<div id="caja7">box-shadow: inset -5px -5px 0px 10px;</div>
+		<div id="caja8">box-shadow: inset 8px 8px 10px 0;</div>
+		<div id="caja9">box-shadow: inset 15px 15px 10px 5px;</div>
+		<div id="caja10">box-shadow: inset 0 0 15px 0 maroon;</div>
+		<div id="caja11">box-shadow: inset 0 0 15px 10px maroon;</div>
+	</div>
+</body>
+
+</html>
