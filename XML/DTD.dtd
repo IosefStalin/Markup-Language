@@ -1,0 +1,46 @@
+<!-- ===== ATRIBUTOS GLOBALES ===== -->
+<!ATTLIST empresa
+    cif CDATA #REQUIRED
+    fechaFundacion CDATA #IMPLIED>
+
+<!-- ===== ELEMENTOS Y ESTRUCTURAS ===== -->
+<!ELEMENT empresa (informacion, departamentos, proyectos)>
+
+<!-- Información básica -->
+<!ELEMENT informacion (nombre, direccion, contacto)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (calle, ciudad, codigoPostal)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codigoPostal (#PCDATA)>
+<!ELEMENT contacto (telefono+, email)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!-- Departamentos y empleados -->
+<!ELEMENT departamentos (departamento+)>
+<!ELEMENT departamento (nombre, presupuesto, empleados)>
+<!ATTLIST departamento id ID #REQUIRED>
+<!ELEMENT presupuesto (#PCDATA)>
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, apellidos, dni, fechaContratacion, salario)>
+<!ATTLIST empleado
+    id ID #REQUIRED
+    departamento IDREF #REQUIRED>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT fechaContratacion (#PCDATA)>
+<!ELEMENT salario (#PCDATA)>
+
+<!-- Proyectos y equipos -->
+<!ELEMENT proyectos (proyecto+)>
+<!ELEMENT proyecto (nombre, fechaInicio, fechaFin?, porcentajeCompletado, equipo)>
+<!ATTLIST proyecto codigo ID #REQUIRED>
+<!ELEMENT fechaInicio (#PCDATA)>
+<!ELEMENT fechaFin (#PCDATA)>
+<!ELEMENT porcentajeCompletado (#PCDATA)>
+<!ELEMENT equipo (miembro+)>
+<!ELEMENT miembro EMPTY>
+<!ATTLIST miembro
+    empleadoRef IDREF #REQUIRED
+    rol (LIDER|DESARROLLADOR|TESTER) #IMPLIED>

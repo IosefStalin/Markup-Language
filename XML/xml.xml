@@ -1,0 +1,112 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<script id="nimlmejbmnecnaghgmbahmbaddhjbecg"/>
+<script/>
+<script/>
+<!--  Declaramos elemento raíz del que cuelgan todos los demás  -->
+<xs:element name="alumnos">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="alumno" minOccurs="1" maxOccurs="unbounded" type="tipoAlumno"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<!--  Ahora declaramos el tipo para elemento alumno  -->
+<xs:complexType name="tipoAlumno">
+<xs:sequence>
+<xs:element name="nombre" minOccurs="1" maxOccurs="1" type="xs:string"/>
+<xs:element name="apellidos" minOccurs="1" maxOccurs="1" type="xs:string"/>
+<xs:element name="documento">
+<xs:complexType>
+<xs:choice>
+<xs:element name="dni">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9]{8}[A-Z]"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="nie">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="(X|Y|Z)[0-9]{7}[A-Z]"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+<!--  Aquí comienza la declaración del elemento dirección  -->
+<xs:element name="direccion" type="tipoDireccion"/>
+<!--  <contactar> también lo declaramos a través de un tipo  -->
+<xs:element name="contactar" type="tipoContactar"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:ID"/>
+</xs:complexType>
+<!--  Declaramos el tipo para el elemento <direccion> de <alumno>  -->
+<xs:complexType name="tipoDireccion">
+<xs:all>
+<xs:element name="domicilio">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:maxLength value="100"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="cod_pos">
+<xs:complexType>
+<xs:attribute name="cp">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9]{5}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+</xs:complexType>
+</xs:element>
+<xs:element name="provincia" type="xs:string" minOccurs="0" maxOccurs="1"/>
+<xs:element name="localidad" type="xs:string" minOccurs="0" maxOccurs="1"/>
+</xs:all>
+</xs:complexType>
+<!--  Declaramos la secuencia de elementos para contactar  -->
+<xs:complexType name="tipoContactar">
+<xs:group ref="grupoContactar"/>
+</xs:complexType>
+<!--  Declaramos el grupo contactar  -->
+<xs:group name="grupoContactar">
+<xs:sequence>
+<xs:element name="telf_casa" type="tipoTelefono"/>
+<xs:element name="telf_movil" type="tipoTelefono"/>
+<xs:element name="telf_trabajo" type="tipoTelefono"/>
+<xs:element name="web" type="xs:anyURI"/>
+<xs:element name="idioma">
+<xs:simpleType>
+<xs:restriction base="xs:language">
+<xs:enumeration value="es"/>
+<xs:enumeration value="en"/>
+<xs:enumeration value="fr"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="fecha_nacimiento" type="xs:date"/>
+<xs:element name="mes_dia_nacimiento" type="xs:gMonthDay"/>
+<xs:element name="mes_nacimiento" type="xs:gMonth"/>
+<xs:element name="dia_nacimiento" type="xs:gDay"/>
+<xs:element name="anio_nacimiento" type="xs:gYear"/>
+<xs:element name="email" minOccurs="0" maxOccurs="1" type="tipoEmail"/>
+</xs:sequence>
+</xs:group>
+<!--  Restricciones para los teléfonos  -->
+<xs:simpleType name="tipoTelefono">
+<xs:restriction base="xs:positiveInteger">
+<xs:pattern value="[0-9]{9}"/>
+</xs:restriction>
+</xs:simpleType>
+<!--  Restricciones para email  -->
+<xs:complexType name="tipoEmail">
+<xs:simpleContent>
+<xs:extension base="xs:string">
+<xs:attribute name="servidor" type="xs:string"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+</xs:schema>

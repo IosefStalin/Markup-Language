@@ -1,0 +1,146 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<script id="nimlmejbmnecnaghgmbahmbaddhjbecg"/>
+<script/>
+<script/>
+<!--  Elemento raíz  -->
+<xs:element name="empresa">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="informacion" type="tipoInformacion" minOccurs="1" maxOccurs="1"/>
+<xs:element name="departamentos" minOccurs="1" maxOccurs="1">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="departamento" type="tipoDepartamento" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="proyectos" minOccurs="1" maxOccurs="1">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="proyecto" type="tipoProyecto" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+<!--  Atributos de empresa  -->
+<xs:attribute name="cif" type="tipoCif" use="required"/>
+<xs:attribute name="fechaFundacion" type="xs:date" use="optional"/>
+</xs:complexType>
+</xs:element>
+<!--  Tipo complejo para elemento información  -->
+<xs:complexType name="tipoInformacion">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<!--  Elemento dirección  -->
+<xs:element name="direccion">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="calle" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="ciudad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="codigoPostal" type="tipoCodigoPostal"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<!--  Elemento contacto  -->
+<xs:element name="contacto">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="telefono" type="tipoTelefono"/>
+<xs:element name="email" type="tipoEmail"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<!--  Tipo complejo para departamento  -->
+<xs:complexType name="tipoDepartamento">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="presupuesto" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+<xs:element name="empleados" minOccurs="1" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="empleado" type="tipoEmpleado" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+<!--  Atributos de departamento  -->
+<xs:attribute name="id" type="xs:ID" use="required"/>
+</xs:complexType>
+<!--  Tipo complejo para empleado  -->
+<xs:complexType name="tipoEmpleado">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="apellidos" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="dni" type="tipoDni" minOccurs="1" maxOccurs="1"/>
+<xs:element name="fechaContratacion" type="xs:date" minOccurs="1" maxOccurs="1"/>
+<xs:element name="salario" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:ID" use="required"/>
+<xs:attribute name="departamento" type="xs:IDREF" use="required"/>
+</xs:complexType>
+<!--  Tipo complejo para proyecto  -->
+<xs:complexType name="tipoProyecto">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+<xs:element name="fechaInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
+<xs:element name="fechaFin" type="xs:date" minOccurs="0" maxOccurs="1"/>
+<xs:element name="porcentajeCompletado">
+<xs:simpleType>
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="0"/>
+<xs:maxInclusive value="100"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="equipo">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="miembro" minOccurs="1" maxOccurs="unbounded">
+<xs:complexType>
+<xs:attribute name="empleadoRef" type="xs:IDREF"/>
+<xs:attribute name="rol" use="optional">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="LIDER"/>
+<xs:enumeration value="DESARROLLADOR"/>
+<xs:enumeration value="TESTER"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+<xs:attribute name="codigo" type="xs:ID"/>
+</xs:complexType>
+<!--  Tipos simples  -->
+<xs:simpleType name="tipoCodigoPostal">
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-5][0-9]{4}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tipoTelefono">
+<xs:restriction base="xs:string">
+<xs:pattern value="[+\s0-9]{15}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tipoEmail">
+<xs:restriction base="xs:string">
+<xs:pattern value="[a-z]+@[a-z]+\.[a-z][a-z][a-z]?"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tipoDni">
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9]{8}[A-Z]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="tipoCif">
+<xs:restriction base="xs:string">
+<xs:pattern value="[A-Z][0-9]{8}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
