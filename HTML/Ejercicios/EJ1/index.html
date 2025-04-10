@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="author" content="Apellido1 Apellido2 Nombre">
+    <meta charset='utf-8'>
+    <title>Cines la Estrella</title>
+</head>
+
+<body background="./images/wallpaper.webp">
+    <table width="80%">
+        <tr>
+            <td><img src="./images/logolaestrella.webp" alt="logo" width="100"></td>
+            <td align="center">
+                <h1>CINES LA ESTRELLA</h1>
+                <i>Donde la ficción se hace realidad</i>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="cartelera.html" target="_self">NUESTRA CARTELERA</a></td>
+        </tr>
+    </table>
+    <form action="./recibido.html" method="get">
+        <fieldset>
+            <legend>Comprar entradas</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="pelicula">Seleccione película:</label><br>
+                        <select id="pelicula">
+                            <option value="harry">Harry Potter y la piedra filosofal</option>
+                            <option value="spiderman">Spider-man: Homecoming</option>
+                            <option value="batman">Batman el caballero oscuro</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Horario:</label><br>
+                        <input type="radio" name="hora" value="1600" id="1600" checked="checked">
+                        <label for="1600">16:00</label>
+                        <input type="radio" name="hora" value="1830" id="1830">
+                        <label for="1830">18:30</label>
+                        <input type="radio" name="hora" value="2100" id="2100">
+                        <label for="2100">21:00</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="entradas">Nº entradas(*):</label><br>
+                        <input type="number" name="entradas" id="entradas" min="1" max="10" value="1"
+                            required="required">
+                    </td>
+                    <td>
+                        <label for="fecha">Fecha(*):</label><br>
+                        <input type="date" name="fecha" id="fecha" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Alimentos y bebidas:</label><br>
+                        <input type="checkbox" name="alimentos" id="palomitas" value="palomitas">
+                        <label for="palomitas">Palomitas</label>
+                        <input type="checkbox" name="alimentos" id="refresco" value="refresco">
+                        <label for="refresco">Refresco</label>
+                        <input type="checkbox" name="alimentos" id="caramelos" value="caramelos">
+                        <label for="caramelos">Caramelos</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de conexión</legend>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico(*)" required="required"
+                autofocus="autofocus">
+            <input type="password" name="password" id="password" placeholder="Contraseña (*)" required="required">
+        </fieldset>
+        <fieldset>
+            <input type="checkbox" name="acepto" id="acepto" checked="checked" required="required">
+            <label for="acepto">Acepto política de privacidad<sup><a href="./politica.html"
+                        target="_blank">(1)</a></sup></label><br>
+            <input type="submit" value="Comprar"><input type="reset" value="Borrar">
+        </fieldset>
+    </form>
+    <p><b>Todos los campos marcados con (*) son obligatorios</b></p>
+</body>
+
+</html>

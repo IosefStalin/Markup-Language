@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+
+<head>
+    <meta name="autor" content="Nombre_apellido1_apellido2">
+    <meta name="lang" content="es_Es">
+    <meta name="description" content="Entendiendo_el_formulario">
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1>Ficha de datos</h1>
+    <form method="post" action="mailto:profesora@instituto.com" style="width: 50%;">
+        <fieldset>
+            <legend>Toma de datos</legend>
+            <table>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="nombre" id="nombre" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td>Primer Apellido:</td>
+                    <td><input type="text" name="primer_apellido" id="primer_apellido" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td>Segundo Apellido:</td>
+                    <td><input type="text" name="segundo_apellido" id="segundo_apellido" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td>Domicilio:</td>
+                    <td><input type="text" name="domicilio" id="domicilio" size="40" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td>Hombre: <input type="radio" name="sexo" id="rad-sex1" value="hombre">
+                        Mujer: <input type="radio" name="sexo" id="rad-sex2" value="mujer"></td>
+                </tr>
+                <tr>
+                    <td>Series favoritas:</td>
+                    <td>Aguila Roja: <input type="checkbox" name="aguila_roja" id="aguila_roja"
+                            value="si">
+                        Isabel: <input type="checkbox" name="isabel" id="isabel" value="si">
+                        Homeland: <input type="checkbox" name="homeland" id="homeland" value="si"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submit" value="Enviar datos"></td>
+                    <td><input type="reset" id="reset" value="Borrar datos"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

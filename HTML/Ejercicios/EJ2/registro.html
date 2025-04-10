@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="author" content="Apellido1 Apellido2 Nombre">
+    <meta charset="UTF-8">
+    <title>Formulario de registro - Biblioteca</title>
+</head>
+
+<body background="./images/wallpaper.webp">
+    <h2>Formulario de registro: Biblioteca ATENEA</h2>
+    <form action="./recibido.html" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre completo(*):</label></td>
+                    <td><input type="text" id="nombre" name="nombre" required="required" minlength="3" maxlength="50" size="40" autofocus="autofocus">
+                    </td>
+
+
+                    <td><label for="telefono">Teléfono(*):</label></td>
+                    <td><input type="tel" id="telefono" name="telefono" required="required" pattern="[0-9]{9}"
+                            placeholder="123456789"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Correo electrónico(*):</label></td>
+                    <td><input type="email" id="email" name="email" required="required" placeholder="ejemplo@correo.com"></td>
+                    <td>Mayor de edad:</td>
+                    <td>
+                        <input type="radio" name="mayor" id="mayorno" value="no">
+                        <label for="mayorno">No</label>
+                        <input type="radio" name="mayor" id="mayorsi" value="si" checked="checked">
+                        <label for="mayorsi">Sí</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias:</legend>
+            <table>
+                <tr>
+            <td valign="top"><label for="genero">Géneros favoritos:</label></td>
+            <td><select name="genero" multiple="multiple" id="genero">
+                <option value="ficcion">Ficción</option>
+                <option value="ciencia">Ciencia</option>
+                <option value="arte">Arte</option>
+                <option value="historia">Historia</option>
+            </select></td>
+            <td valign="top"><label for="otros">Otros datos de interés:</label></td>
+            <td><textarea name="otros" id="otros" rows="4" cols="50"></textarea></td>
+        </tr> 
+        </table>
+        </fieldset>
+
+        <fieldset>
+        <p><input type="checkbox" name="newsletter" id="newsletter" checked="checked">
+        <label for="newsletter">Deseo recibir newsletter con novedades</label></p>
+        <p><input type="submit" name="registrarse" id="registrarse" value="Registrarse">
+        <input type="reset" id="reset" value="Borrar todo"></p>
+    </fieldset>
+    </form>
+    <p><strong>Todos los campos marcados con (*) son obligatorios</strong></p>
+    <p>Tu carnet de socio será válido en nuestros dentros de:</p>
+    <ul>
+        <li>Madrid</li>
+        <li>Barcelona</li>
+        <li>Valencia</li>
+        <li>Sevilla</li>
+        <li>Bilbao</li>
+    </ul>
+    <a href="./index.html">VOLVER</a>
+</body>
+
+</html>

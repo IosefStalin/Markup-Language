@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="author" content="Nombre_apellido1_apellido2">
+    <meta name="lang" content="es_Es">
+    <meta name="description" content="Entendiendo_el_formulario">
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+
+</head>
+
+<body>
+    <form action="mailto:pepita@gmail.com" method="post" enctype="text/plain" style="width: 60%">
+        <fieldset>
+            <legend>Identificaci&oacute;n</legend>
+            <label for="name">Tu Usuario:</label>
+            <input type="text" name="nombre" id="name" size="30">
+            <label for="pass">Tu Contrase&ntilde;a:</label>
+            <input type="password" name="clave" id="pass" size="8">
+        </fieldset>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>Informaci&oacute;n a recibir:</p>
+            <input type="checkbox" name="ch1" id="check1" value="Html">
+            <label for="check1">Manual de Html</label>
+            <input type="checkbox" name="ch2" id="check2" value="Editor">
+            <label for="check2">Programa Editor</label>
+            <input type="checkbox" name="ch3" id="check3" value="Ejemplo">
+            <label for="check3">Archivo de Ejemplos</label>
+
+
+            <p>Tu Edad :</p>
+            <input type="radio" name="edad" id="menos20" value="-20">
+            <label for="menos20">Menos de 20 a&ntilde;os</label>
+            <input type="radio" name="edad" id="entre2040" value="20-40">
+            <label for="entre2040">Entre 20 y 40 a&ntilde;os</label>
+            <input type="radio" name="edad" id="mas40" value=">40">
+            <label for="mas40">M&aacute;s de 40 años</label>
+
+            <input type="hidden" name="lugar-oculto" id="lugar-oculto" value="valor-oculto">
+
+            <p>Como encontraste mi p&aacute;gina:</p>
+            <select name="como">
+                <option value="casualidad">De casualidad</option>
+                <option value="Google">Por el buscador Google</option>
+                <option value="Yahoo">Por el buscador Yahoo</option>
+                <option value="Comentaron">Me la comentaron</option>
+            </select>
+
+            <p>Tus Comentarios: </p>
+            <textarea name="comentario" id="comentario" rows=5 cols=40></textarea>
+            <br>
+            <input type=submit id="submit" value="Enviar">
+            <input type=reset id="reset" value="Borrar">
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
